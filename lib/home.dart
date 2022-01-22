@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_blog/widgets/travel_blog.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class HomePage extends StatelessWidget {
               style: TextStyle(color: Colors.black, fontSize: 36),
             ),
           ),
-          Expanded(flex: 2, child: Placeholder()),
+          Expanded(flex: 2, child: TravelBlog()),
           Padding(
             padding: const EdgeInsets.all(15),
             child: Row(
