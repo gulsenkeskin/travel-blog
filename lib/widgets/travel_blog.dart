@@ -57,8 +57,15 @@ class TravelBlog extends StatelessWidget {
                 child: Container(
                   width: 60,
                   height: 60,
-                  decoration: BoxDecoration(color: Colors.deepOrange,
-                  borderRadius: BorderRadius.circular(30)),
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrange,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                    size: 30,
+                  ),
                 ),
               )
             ],
