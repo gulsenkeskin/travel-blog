@@ -66,6 +66,28 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   )),
+            )),
+        Positioned(
+            top: expandedHeight - shrinkOffset - 120,
+            left: 30,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  travel.name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                  ),
+                ),
+                Text(
+                  travel.location,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                  ),
+                )
+              ],
             ))
       ],
     );
