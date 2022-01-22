@@ -71,40 +71,43 @@ class DetailPage extends StatelessWidget {
   }
 
   Widget _buildUserInfo() {
-    return Row(
-      children: [
-        //profil resmi alanı
-        ClipRRect(
-          borderRadius: BorderRadius.circular(50),
-          child: Image.asset(
-            travel.url,
-            width: 50,
-            height: 50,
-            fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      child: Row(
+        children: [
+          //profil resmi alanı
+          ClipRRect(
+            borderRadius: BorderRadius.circular(50),
+            child: Image.asset(
+              travel.url,
+              width: 50,
+              height: 50,
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left:10 ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                travel.name,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                travel.location,
-                style: TextStyle(fontSize: 16),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(left:10 ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  travel.name,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  travel.location,
+                  style: TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
           ),
-        ),
-        Spacer(),
-        Icon(
-          Icons.share,
-          color: Colors.grey,
-        )
-      ],
+          Spacer(),
+          Icon(
+            Icons.share,
+            color: Colors.grey,
+          )
+        ],
+      ),
     );
   }
 }
