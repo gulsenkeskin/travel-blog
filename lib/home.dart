@@ -12,9 +12,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0, // appbarın altındaki çizgiyi siler
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 10),
+            padding: EdgeInsets.only(right: 10),
             child: Icon(
               Icons.menu,
               color: Colors.black,
@@ -25,8 +25,8 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
             child: Text(
               'Travel Blog',
               style: TextStyle(color: Colors.black, fontSize: 36),
@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.all(15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Text(
                   'Most Popular',
                   style: TextStyle(fontSize: 20),
