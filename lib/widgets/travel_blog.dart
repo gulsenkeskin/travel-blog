@@ -16,7 +16,7 @@ class TravelBlog extends StatelessWidget {
           return GestureDetector(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return DetailPage();
+                return DetailPage(travel: travel,);
               }));
             },
             child: Stack(
