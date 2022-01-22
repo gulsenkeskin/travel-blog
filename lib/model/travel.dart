@@ -13,4 +13,13 @@ class Travel {
       Travel("Place 4", "Place 4", "assets/images/top4.jpg"),
     ];
   }
+
+  static List<Travel> generateMostPopular() {
+    return [
+      Travel("Place 5", "Place 5", "assets/images/bottom1.jpg"),
+      Travel("Place 6", "Place 6", "assets/images/bottom2.jpg"),
+      Travel("Place 7", "Place 7", "assets/images/bottom3.jpg"),
+      Travel("Place 8", "Place 8", "assets/images/bottom4.jpg"),
+    ];
+  }
 }
