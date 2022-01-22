@@ -15,7 +15,7 @@ class TravelBlog extends StatelessWidget {
           return Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 20, bottom: 30),
+                padding: const EdgeInsets.only(top: 10, right: 20, bottom: 30),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(5),
                   child: Image.asset(
