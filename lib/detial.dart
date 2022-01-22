@@ -83,18 +83,23 @@ class DetailPage extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        Column(
-          children: [
-            Text(
-              travel.name,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            Text(
-              travel.location,
-              style: TextStyle(fontSize: 16),
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left:10 ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                travel.name,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                travel.location,
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
         ),
+        Spacer(),
         Icon(
           Icons.share,
           color: Colors.grey,
