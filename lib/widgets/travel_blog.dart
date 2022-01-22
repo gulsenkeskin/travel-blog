@@ -15,7 +15,7 @@ class TravelBlog extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
             child: Image.asset(
               travel.url,
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
             ),
           )
