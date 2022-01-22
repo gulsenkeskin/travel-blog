@@ -24,6 +24,29 @@ class TravelBlog extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+              ),
+              Positioned(
+                bottom: 80,
+                left: 15,
+                child: Column(
+                  children: [
+                    Material(
+                      color: Colors.transparent,
+                      child: Text(
+                        travel.location,
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                    Material(
+                      color: Colors.transparent,
+                      child: Text(
+                        travel.name,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 30),
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           );
