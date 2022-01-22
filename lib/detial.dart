@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'model/travel.dart';
 
 class DetailPage extends StatelessWidget {
   final Travel travel;
   final double expandedHeight = 300;
+  final double roundedContainerHeight = 50;
 
   DetailPage({Key? key, required this.travel}) : super(key: key);
 
@@ -24,15 +24,21 @@ class DetailPage extends StatelessWidget {
   Widget _buildSilverHead() {
     return SliverPersistentHeader(
         delegate: DetailSliverDelegate(
-            travel: travel, expandedHeight: expandedHeight));
+            travel: travel,
+            expandedHeight: expandedHeight,
+            roundedContainerHeight: roundedContainerHeight));
   }
 }
 
 class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
   final Travel travel;
   final double expandedHeight;
+  final double roundedContainerHeight;
 
-  DetailSliverDelegate({required this.travel, required this.expandedHeight});
+  DetailSliverDelegate(
+      {required this.travel,
+      required this.expandedHeight,
+      required this.roundedContainerHeight});
 
   @override
   Widget build(
@@ -48,6 +54,19 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
             fit: BoxFit.cover,
           ),
         ),
+        Positioned(
+            top: expandedHeight - roundedContainerHeight - shrinkOffset,
+            left: 0,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: roundedContainerHeight,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  )),
+            ))
       ],
     );
   }
