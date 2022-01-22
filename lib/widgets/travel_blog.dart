@@ -29,12 +29,13 @@ class TravelBlog extends StatelessWidget {
                 bottom: 80,
                 left: 15,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Material(
                       color: Colors.transparent,
                       child: Text(
                         travel.location,
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
                     Material(
@@ -42,7 +43,9 @@ class TravelBlog extends StatelessWidget {
                       child: Text(
                         travel.name,
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 30),
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30),
                       ),
                     )
                   ],
