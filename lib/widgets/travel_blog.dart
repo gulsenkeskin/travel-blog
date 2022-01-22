@@ -11,12 +11,15 @@ class TravelBlog extends StatelessWidget {
       var travel = _list[index];
       return Stack(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(5),
-            child: Image.asset(
-              travel.url,
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.cover,
+          Padding(
+            padding: const EdgeInsets.only(right: 20, bottom: 30),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image.asset(
+                travel.url,
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.cover,
+              ),
             ),
           )
         ],
