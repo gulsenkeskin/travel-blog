@@ -50,6 +50,15 @@ class TravelBlog extends StatelessWidget {
                     )
                   ],
                 ),
+              ),
+              Positioned(
+                bottom: 0,
+                right: 30,
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(color: Colors.deepOrange),
+                ),
               )
             ],
           );
